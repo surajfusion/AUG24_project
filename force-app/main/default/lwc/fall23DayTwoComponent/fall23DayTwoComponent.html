@@ -1,0 +1,78 @@
+<template>
+    <lightning-card>
+        <!--Normal Way-->
+        <p>Name: Suraj Singh</p>
+        <p>City: Ajmer</p>
+
+        <!--Salesforce Way to Design the above UI-->
+        <table>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    <lightning-formatted-name
+                        first-name="Suraj"
+                        last-name="Singh"
+                        middle-name=""
+                        informal-name=""
+                        suffix=""
+                        salutation="Mr."
+                    ></lightning-formatted-name>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    Address
+                </td>
+                <td>
+                    <lightning-formatted-address
+                        street="121 Spear St."
+                        city="Ajmer"
+                        country="India"
+                        province=""
+                        postal-code="94105"
+                    ></lightning-formatted-address>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Salary
+                </td>
+                <td>
+                    <lightning-formatted-number 
+                        value="12442.34" 
+                        format-style="currency" 
+                        currency-code="EUR"
+                    ></lightning-formatted-number>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    PHONE
+                </td>
+                <td>
+                    <lightning-formatted-phone 
+                        value="+18005551212" 
+                    ></lightning-formatted-phone>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Email
+                </td>
+                <td>
+                    <lightning-formatted-email 
+                        value="email@example.com" 
+                    ></lightning-formatted-email>
+                </td>
+            </tr>
+        </table>
+    </lightning-card>
+</template>

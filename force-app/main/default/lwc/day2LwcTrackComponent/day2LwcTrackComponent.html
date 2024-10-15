@@ -1,0 +1,26 @@
+<template>
+    <lightning-card  variant="Narrow"  title={titleStr} icon-name="standard:account">
+        <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon>
+        <div class="slds-p-horizontal_small">
+            {firstName}
+        </div>
+        <div slot="footer">
+            <lightning-button variant="brand" label={footerLabel} title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+
+        
+    </lightning-card>
+    
+
+    <!-- Assignment 
+    Create an LWC component that will show a contact Card having follwing details on the card:
+    First Name, Last Name, Email 
+
+    and the on the footer design three buttons:
+    Show Address: Once the user click on the button it will show the address on the card.
+    Show Phone:  Once the user click on the button it will show the Phone Number on the card.
+    Hide Email: Once the user click on the button it will hides the email from the card UI.
+    
+    -->
+    
+</template>

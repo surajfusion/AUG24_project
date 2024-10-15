@@ -1,0 +1,36 @@
+<template>
+    <lightning-card>
+        <lightning-layout>
+            <lightning-layout-item padding="around-small" size="8">
+                <!-- User Enters the Airport name-->
+                <lightning-input 
+                    type="search"
+                    label="Enter Airport Name"
+                    onchange={handleInputAirportName}
+                ></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="4">
+                <div style="padding-top: 23px;">
+                    <!--User hits the button to get the Airports details-->
+                    <lightning-button 
+                        variant="brand" 
+                        label="Get Airport Details" title="Get Airport Details" 
+                        onclick={handleClick} 
+                        class="slds-m-left_x-small"
+                    ></lightning-button>
+                </div>  
+            </lightning-layout-item>
+        </lightning-layout>
+        
+        <!--All Airports details will be visible to the User-->
+        <div style="height: 300px;">
+            <lightning-datatable
+                key-field="name"
+                data={data}
+                columns={columns}
+                show-row-number-column
+                hide-checkbox-column
+            ></lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

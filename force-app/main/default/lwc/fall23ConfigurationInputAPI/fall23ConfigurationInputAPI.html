@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title={label} if:true={showContactList}>
+        <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="id"
+                    data={contactList}
+                    columns={columns}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+
+    <lightning-card title={label} if:false={showContactList}>
+        <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="id"
+                    data={leadList}
+                    columns={columns}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Input Component" >
+        <div class="slds-p-horizontal_large">
+            <lightning-input type="text" label="Enter First Name" onchange={handleFirstNameChange}></lightning-input>
+            <lightning-input type="text" 
+            label="Enter Last Name" onchange={handleLastNameChange} value={lastName}></lightning-input>
+            <lightning-input type="tel" label="Enter Phone" onchange={handlePhoneChange}></lightning-input>
+        </div>
+
+        <div slot="footer">
+            FirstName: {firstName} <br/>
+            LastName : {lastName} <br/>
+            Phone    : {phone} <br/>
+        </div>
+    </lightning-card>
+</template>

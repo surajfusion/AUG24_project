@@ -1,0 +1,33 @@
+<template>
+<lightning-card  variant="Narrow"  title="Object Concepts" icon-name="standard:contact">
+    <div class="slds-p-horizontal_small">
+        First Name: {contactObj.firstName}<br>
+        Last Name: {contactObj.lastName}
+        <template for:each={contactObj.skills} for:item="skill">
+            <li key={skill}>{skill}</li>
+        </template>
+
+        <hr/>
+
+        <template for:each={contactObjList} for:item="contact">
+            <div key={contact.firstName}>
+                First Name: {contact.firstName} <br>
+                Last Name: {contact.lastName}
+                <template for:each={contact.skills} for:item="skill">
+                    <li key={skill}>{skill}</li>
+                </template>
+            </div>
+        </template>
+    </div>
+</lightning-card>
+<!-- 
+    Assignment:
+    Design an LWC component that will have 2+ contacts records as an array of Object. 
+    After that design a card that will display the contact records in a HTML table.
+
+    Hard Level:
+    Design a button that will hide the 2nd record from the Contacts Record list.
+    **POP, Splice, Own Algo.**
+    
+-->
+</template>
