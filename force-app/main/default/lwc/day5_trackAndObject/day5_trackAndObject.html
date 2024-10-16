@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-horizontal_small">
+            First Name: {contactObj.firstName} <br>
+            Last Name: {contactObj.lastName}<br>
+            <lightning-formatted-name
+                first-name={contactObj.firstName}
+                last-name={contactObj.lastName}
+                salutation="Mr."
+                format="short"
+            ></lightning-formatted-name>
+            Account Name: {contactObj.account.name} <br>
+            <p><lightning-formatted-phone value={contactObj.phone}></lightning-formatted-phone></p>
+            Total Salary: {totalSalary}
+
+            <lightning-button variant="base" label="Show Array Logs" title="titleName" onclick={handleLoopOnArray}></lightning-button>
+            <hr/>
+            <template for:each={contactList} for:item="contact">
+                <div key={contact.firstName}>
+                    First Name: {contact.firstName} <br>
+                    Last Name: {contact.lastName}
+                    <template for:each={contact.skills} for:item="skill">
+                        <li key={skill}>{skill}</li>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
