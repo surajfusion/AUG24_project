@@ -1,0 +1,34 @@
+<template>
+    <lightning-card variant="Narrow" title="Create New Contact Record" icon-name="standard:contact">
+        <!-- LDS record-form -->
+        <lightning-record-form object-api-name={objectApiName} record-id="003J2000007fVBlIAM" fields={fields}
+            columns="2"></lightning-record-form>
+        <hr />
+        <lightning-record-edit-form record-id="003J2000007fVBlIAM" object-api-name="Contact">
+            <lightning-messages> </lightning-messages>
+            <lightning-output-field field-name="AccountId">
+            </lightning-output-field>
+            <lightning-input-field field-name="FirstName"> </lightning-input-field>
+            <lightning-input-field field-name="LastName"> </lightning-input-field>
+            <lightning-input-field field-name="Email"> </lightning-input-field>
+            <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Update">
+            </lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+    <!--
+        Assignment:
+        Create a array of Object that Contains 5+ contact records along with its account details.
+        Along with other field add few fields as Salary(decimal), isEmployed(boolean)
+
+        #1: design a logic to display all contact on a lightning card.
+        #2: Design a logic to display Average Salary.
+        #3: Design a logic to display Maximum Salary.
+        #4: Design buttons: `Sort By Name`, and `Sort by AccountName`, 'Contact with Gmail.Com'
+        #5: When user click on the 'Contact with Gmail.Com' button then display contacts having email's domain is `gmail.com`
+
+        Hard:
+        #6: When user click on the button `Sort by Name`, then design the logic to sort the contacts by name and display on the UI.
+        #7: similary when user clicks on the `Sort by AccountName`, then sort the contacts by AccountName and display on the UI.
+        
+        -->
+</template>
