@@ -1,0 +1,19 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Get Input from User" icon-name="standard:account">
+
+        <div class="slds-p-horizontal_small">
+            <lightning-input type="text" label="Enter some text" onchange={handleOnChange} onblur={handleOnBlur}></lightning-input>
+
+            <hr/>
+            {outputToHTML}
+        </div>
+    </lightning-card>
+    <!--
+        Assignment:
+        #1: Design an LWC component that take the input from the user in a contact form having following fields:
+        First Name, Last Name, Phone, Email, Gender, Date Of Birth.
+
+        And add a card on the bottom of the screen to display the information that the user input.
+
+    -->
+</template>
