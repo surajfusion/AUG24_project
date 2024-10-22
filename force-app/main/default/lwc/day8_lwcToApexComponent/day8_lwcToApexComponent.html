@@ -1,0 +1,21 @@
+<template>
+
+    <lightning-card  variant="Narrow"  title="Insert New Contact" icon-name="standard:contact">
+        <div class="slds-p-horizontal_small">
+            <lightning-input 
+                type="text" variant="standard" 
+                name="name" label="FirstName" 
+                placeholder="type here..."
+                onblur={handleFirstNameInput}
+            ></lightning-input>
+            <lightning-input type="text" variant="standard" 
+                name="name" label="Last Name" 
+                placeholder="type here..."
+                onblur={handleLastNameInput}
+            ></lightning-input>
+        </div>
+        <div slot="footer">
+            <lightning-button variant="base" label="SAVE" title="SAVE" onclick={handleCreateContact}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
