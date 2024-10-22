@@ -29,11 +29,13 @@ public class DAY5_NonPrimitiveDT {
         // having same phone and email.
         // */
         // 
+        
         List<Lead> leadList = [
             Select Email, Phone 
             FROM Lead
             WHERE email != NULL
-        ];        
+        ];     
+        
         Set<String> emails = new Set<String>();
         Set<String> phones = new Set<String>();
         

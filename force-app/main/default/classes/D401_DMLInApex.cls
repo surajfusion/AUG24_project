@@ -52,7 +52,9 @@ public class D401_DMLInApex {
          * And Populate Contact's Phone on Account Phone.
          *
          * */
+        
         String leadSourceName = 'Phone Inquiry';
+        
         List<Contact> contactList = [
             SELECT Id, AccountId, firstName, lastName, Phone
             FROM Contact
@@ -61,6 +63,7 @@ public class D401_DMLInApex {
             AND AccountId != NULL
             AND Phone != NULL
         ];
+        
         List<Account> accountToUpdate = new List<Account>();
         
         for(Contact contObj: contactList){

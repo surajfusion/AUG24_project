@@ -8,7 +8,6 @@ public class D4_SOQLInApex {
         ];
         
         for(Contact contactObj :contactList){
-            //system.debug('ContactObj : ' + contactObj);
             system.debug('Contact Name : ' + contactObj.FirstName);
         }
     }
