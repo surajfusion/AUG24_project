@@ -1,0 +1,37 @@
+<template>
+    <lightning-card variant="Narrow" title="View Contacts Records" icon-name="standard:contact">
+        OLD WAY
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Name</th>
+            </tr>
+            <template for:each={contactList} for:item="contact">
+                <tr key={contact.Id}>
+                    <td>{contact.FirstName}</td>
+                    <td>{contact.LastName}</td>
+                    <td>{contact.Email}</td>
+                </tr>
+            </template>
+        </table>
+
+        <hr />
+        <lightning-datatable 
+            key-field="Id"
+            data={contactList} 
+            columns={columns}
+            show-row-number-column
+            hide-checkbox-column
+        ></lightning-datatable>
+    </lightning-card>
+
+    <!--
+        Assignment:
+        Design an LWC component that displays the All Account in a datatable having following fields:
+        Name,
+        Phone,
+        Website,
+        Address
+    -->
+</template>
