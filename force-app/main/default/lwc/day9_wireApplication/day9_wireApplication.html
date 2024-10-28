@@ -1,0 +1,14 @@
+<template>
+    <lightning-card variant="Narrow" title="Search Contacts Records" icon-name="standard:contact">
+        <lightning-input type="text" variant="standard" 
+            label="Enter Search String" 
+            placeholder="type here..." onchange={handleInputChange}></lightning-input>
+        <lightning-datatable 
+            key-field="Id"
+            data={contactList} 
+            columns={columns}
+            show-row-number-column
+            hide-checkbox-column
+        ></lightning-datatable>
+    </lightning-card>
+</template>
